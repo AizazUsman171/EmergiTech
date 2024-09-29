@@ -11,6 +11,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- try -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="menu-toggle">☰</div> <!-- Hamburger menu button, now positioned left -->
+            <h1 class="logo">Emergitech</h1>
+            <ul class="nav-links">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="Solution.html">SOLUTIONS</a></li>
+                <li><a href="consult.html">CONSULTATION</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <a href="https://www.linkedin.com" target="_blank" class="linkedin-link">
+                <i class="fab fa-linkedin linkedin-logo"></i>
+            </a>
+        </div>
+    </nav>
+    
+    
 
     <!-- Navbar -->
     <nav id="navbar">
@@ -38,7 +56,7 @@
         <div class="hero-text">
             <h1>Your Dedicated Partner<br>In Business Transformation</h1>
             <p>Guiding you towards unprecedented success with innovative tech solutions and proven strategies.</p>
-            <a href="#contact" class="btn">Contact Us <span class="arrow">→</span></a>
+            <a href="contact.html" class="btn">Contact Us <span class="arrow">→</span></a>
         </div>
     </div>      
 
@@ -230,9 +248,9 @@
             <h1>Emergitech</h1>
             <ul class="footer-menu">
                 <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SOLUTIONS</a></li>
-                <li><a href="#">CONSULTATION</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="Solution.html">SOLUTIONS</a></li>
+                <li><a href="consult.html">CONSULTATION</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
             <div class="footer-social">
                 <a href="https://www.linkedin.com" target="_blank">
@@ -261,7 +279,8 @@
                 <button type="submit">Submit</button>
             </form>
             <div class="footer-bottom">
-                <p>© 2024 by MTMS. Designed & Developed By Triosol™</p>
+                <p>© 2024 by MTMS. Designed & Developed By <a href="https://linktr.ee/aizazusman171" target="_blank" style="color: inherit; text-decoration: none;">Triosol™</a></p>
+
             </div>
         </div>
     </div>
@@ -269,5 +288,19 @@
 
 <!-- Include script for navbar scroll behavior -->
     <script src="script.js"></script>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.querySelector(".menu-toggle");
+            const navbarLinks = document.querySelector("#navbar ul.nav-links");
+    
+            toggleButton.addEventListener("click", () => {
+                navbarLinks.classList.toggle("mobile");
+                navbarLinks.classList.toggle("show");
+            });
+        });
+    </script> -->
+    
+    
 </body>
 </html>

@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
+    // Hamburger Menu Toggle for Mobile View
+    const toggleButton = document.querySelector(".menu-toggle");
+    const navbarLinks = document.querySelector("#navbar ul.nav-links");
+
+    toggleButton.addEventListener("click", () => {
+        navbarLinks.classList.toggle("show");
+    });
+
     // Scroll Animation Effect for Cards using Intersection Observer
     const solutionCards = document.querySelectorAll(".solution-card");
 

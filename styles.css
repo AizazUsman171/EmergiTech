@@ -2091,3 +2091,49 @@ body {
     font-weight: 300;
     color: #fff;
 }
+
+
+/* changes */
+
+/* Navbar Toggle Button for Mobile - Positioned to the left */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    left: 20px;  /* Position on the left-hand side */
+    top: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 1500; /* Ensure it's above other elements */
+}
+
+/* Mobile Navigation Styles */
+#navbar ul.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Display the hamburger button on small screens */
+    }
+
+    #navbar ul.nav-links {
+        display: none; /* Hide the nav links by default in mobile view */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #navbar ul.nav-links li {
+        margin: 10px 0;
+    }
+
+    #navbar ul.nav-links.show {
+        display: flex; /* Show the nav links when the 'show' class is added */
+    }
+}
