@@ -1307,14 +1307,21 @@ body {
 }
 
 
-/* Contact Form Styling */
+/* Contact Section Styling */
 .contact-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 100px); /* Adjust for navbar height */
-    background: linear-gradient(to bottom, #000000, #4155A6); /* Same gradient background as other sections */
-    padding: 100px 20px 20px 20px; /* Add top padding to avoid overlap with navbar */
+    min-height: calc(100vh - 100px);
+    background: linear-gradient(to bottom, #000000, #4155A6);
+    padding: 100px 20px 20px 20px;
+}
+
+.contact-heading {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .contact-form {
@@ -1324,21 +1331,21 @@ body {
     max-width: 600px;
     width: 100%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid white; /* Set the border color to white */
 }
 
 .contact-form .form-group {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align labels and inputs to the left */
+    align-items: flex-start;
 }
 
 .contact-form label {
     color: white;
     font-weight: 300;
     margin-bottom: 5px;
-    font-size: 14px; /* Made the font size smaller */
+    font-size: 14px;
 }
 
 .contact-form input[type="text"],
@@ -1349,15 +1356,28 @@ body {
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 14px; /* Made the font size smaller */
+    font-size: 14px;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Set width to full within the container */
+    width: 100%;
     max-width: 500px;
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
+.contact-form input[type="tel"], /* Ensure tel input is styled */
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6); /* Ensure consistent background color */
+    color: white; /* Ensure consistent text color */
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+}
 .contact-form textarea:focus {
     border-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
@@ -1365,13 +1385,13 @@ body {
 
 .contact-form textarea {
     resize: vertical;
-    height: 120px; /* Reduced the height slightly */
+    height: 120px;
 }
 
 .contact-form button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #4155A6; /* Changed to match the site's color scheme */
+    background-color: #4155A6;
     color: white;
     border: none;
     font-size: 16px;
@@ -1379,62 +1399,119 @@ body {
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px; /* Adds some space above the button */
-    align-self: center; /* Center the button */
+    margin-top: 20px;
+    align-self: center;
 }
 
 .contact-form button:hover {
-    background-color: #31448c; /* Darker shade on hover */
+    background-color: #31448c;
     transform: translateY(-2px);
 }
 
-/* .contact-section h1 {
-    font-size: 36px;
-    font-weight: 400;
-    color: white;
-    margin-bottom: 20px;
-    text-align: center; */
-
 .contact-section p {
     color: white;
-    font-size: 16px; /* Optional: You can also adjust the font size if needed */
-    text-align: center; /* Optional: To center the paragraph text */
-    margin-bottom: 20px; /* Optional: Add some margin to create space below the text */
-
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+
 /* Consultation Hero Section Styling */
+/* test */
+
+/* test */
+
+
+/* Navbar Toggle Button for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #navbar ul.nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #navbar ul.nav-links.show {
+        display: flex;
+    }
+
+    #navbar ul.nav-links li {
+        margin: 10px 0;
+    }
+}
+
 .consultation-hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: auto;
+    min-height: 60vh;
     background: linear-gradient(to bottom, #000000, #4155A6);
     padding: 20px;
     color: white;
     text-align: center;
+    flex-direction: column;
+    margin-top: 50px; /* Add margin to create gap between navbar and hero section */
 }
 
 .consultation-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
 .consultation-hero p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 20px;
+    padding: 0 15px;
     color: rgba(255, 255, 255, 0.8);
 }
 
 .consultation-hero .btn {
-    padding: 15px 40px;
+    padding: 10px 25px;
     background-color: #fff;
     color: #4155A6;
     border-radius: 30px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     transition: transform 0.3s, background-color 0.3s;
+    margin-top: 10px;
 }
+
+.consultation-hero .btn:hover {
+    background-color: #ddd;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+    .consultation-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .consultation-hero p {
+        font-size: 0.9rem;
+    }
+
+    .consultation-hero .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
+
 
 .consultation-hero .btn:hover {
     background-color: #ddd;
@@ -1447,6 +1524,7 @@ body {
     padding: 60px 20px;
     color: white;
     text-align: center;
+    margin-top: 100px; /* Adjust this value as needed */
 }
 
 .why-consultation-section h2 {
