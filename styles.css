@@ -1,0 +1,2093 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Transparent Navbar Styling */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent; 
+    z-index: 1000;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#navbar .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#navbar ul.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul.nav-links li {
+    margin: 0 15px;
+}
+
+#navbar ul.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+#navbar ul.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* LinkedIn Icon Styling */
+.linkedin-link {
+    position: absolute;
+    right: 20px;
+}
+
+.linkedin-logo {
+    font-size: 24px;
+    color: white;
+    transition: none;
+}
+
+.linkedin-link:hover .linkedin-logo {
+    color: white;
+}
+
+/* Hero Section with Video */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #ddd;
+    margin: 20px 0;
+}
+
+/* Styling for the contact button */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 600;
+}
+
+.btn .arrow {
+    margin-left: 10px;
+}
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* "Who We Are" Section */
+.who-we-are {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+}
+.who-we-are-text h2{
+    font-weight: 100;
+}
+
+.who-we-are-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.who-we-are-video {
+    flex: 1;
+    max-width: 50%;
+}
+
+.who-we-are-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.who-we-are-text {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 40px;
+    color: white;
+}
+
+.who-we-are h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.who-we-are p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+
+/* Industries Section */
+.industries-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    height: 100vh;
+    background-color: #030407;
+}
+
+
+.industries-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.industries-text {
+    flex: 1;
+    color: white;
+}
+
+.industries-text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.industries-text ul {
+    list-style: none;
+}
+
+.industries-text ul li {
+    font-size: 24px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color:white;
+}
+
+.industries-text ul li .bullet {
+    margin-right: 10px;
+    font-size: 48px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.industries-text ul li:hover .bullet {
+    transform: translateX(10px);
+}
+
+/* Video Circle */
+.industries-video {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-video-wrapper {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Services Section Styling */
+.services-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #0b0d17; /* Dark background */
+    background: linear-gradient(to bottom, #000000, #4155A6);
+}
+
+.services-header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 100;
+    color: white;
+}
+
+.services-header p {
+    font-size: 18px;
+    line-height: 1.8; 
+    color: rgba(255, 255, 255, 0.8); 
+    max-width: 800px; 
+    margin: 0 auto; 
+    text-align: center;
+    font-weight: 300;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    padding-top:2.5rem ;
+    margin: 0 auto;
+}
+
+.service-box {
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: transparent;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.service-box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.service-box .icon {
+    font-size: 32px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Expert Knowledge Section */
+.expert-knowledge-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, #4155A6, #6475d0); /* Background gradient */
+    text-align: center;
+}
+
+.expert-knowledge-section .content {
+    max-width: 800px;
+}
+
+.expert-knowledge-section h1 {
+    font-size: 48px;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.expert-knowledge-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+}
+
+
+/* Clients Section Styling */
+.clients-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #6475d0;
+    color: black;
+}
+
+.clients-header h1 {
+    font-size: 48px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.clients-header p {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 40px;
+}
+
+.client-logos-slider {
+    position: relative;
+    overflow: hidden; 
+    padding-bottom: 30px; 
+    width: 100%;
+}
+
+.logos-wrapper {
+    display: flex;
+    gap: 0px;
+    width: calc(200%);
+    animation: slide 25s linear infinite;
+}
+.logo-item {
+    flex: 0 0 12%; 
+}
+
+.logo-item img {
+    height: 150px; 
+    max-width: 100%;
+    object-fit: contain;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}   
+
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom,#6475d0, #9ABCFF); /* Background gradient */
+    text-align: center;
+}
+
+.testimonials-section h1 {
+    font-size: 48px;
+    font-weight: 100;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonial-box {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 40px 30px;
+    width: 300px;
+    text-align: center;
+    color: #000;
+}
+
+.testimonial-box p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #000
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.testimonial-author i {
+    font-size: 20px;
+    color: #000;
+}
+
+.testimonial-author h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.testimonial-author span {
+    font-size: 14px;
+    font-weight: 50;
+    color: #000;
+}
+
+/* Footer Section Styling */
+.footer-section {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-menu {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-left address {
+    font-style: normal;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-legal {
+    margin-bottom: 20px;
+}
+
+.footer-legal a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+.footer-right {
+    flex: 1;
+}
+
+.footer-right h2 {
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.newsletter-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.newsletter-form .subscribe-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form .subscribe-checkbox input {
+    margin-right: 10px;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+}
+
+
+
+/* Media Query for tablets and smaller screens */
+@media (max-width: 768px) {
+    #navbar .logo {
+        font-size: 20px;
+    }
+
+    #navbar ul.nav-links {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 50%;
+        height: auto;
+        display: none;
+    }
+
+    #navbar ul.nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+
+    /* Who We Are section */
+    .who-we-are-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .who-we-are-video {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .who-we-are-text {
+        max-width: 100%;
+        padding-left: 0;
+    }
+    .industries-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .industries-text h2 {
+        font-size: 36px;
+    }
+
+    .industries-text ul li {
+        font-size: 20px;
+    }
+
+    .circle-video-wrapper {
+        width: 300px;
+        height: 300px;
+        margin-top: 20px;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-header h1 {
+        font-size: 36px;
+    }
+
+    .services-header p {
+        font-size: 16px;
+    }
+
+    .service-box h3 {
+        font-size: 20px;
+    }
+
+    .service-box p {
+        font-size: 14px;
+    }
+    .expert-knowledge-section h1 {
+        font-size: 36px;
+    }
+
+    .expert-knowledge-section p {
+        font-size: 16px;
+    }
+    .clients-header h1 {
+        font-size: 36px;
+    }
+
+    .clients-header p {
+        font-size: 16px;
+    }
+
+    .logo-item {
+        flex: 0 0 25%;
+    }
+
+    .logo-item img {
+        height: 100px;
+    }
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-box {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-right h2 {
+        font-size: 24px;
+    }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 480px) {
+    #navbar .logo {
+        top: 5px;
+        font-size: 18px;
+    }
+
+    #navbar ul.nav-links {
+        width: 100%;
+    }
+
+    #navbar ul.nav-links li {
+        margin: 10px 0;
+    }
+
+    .linkedin-link {
+        top: 4.5px;
+        right: 15px;
+    }
+
+    .linkedin-logo {
+        font-size: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.7rem;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Who We Are section */
+    .who-we-are h2 {
+        font-size: 28px;
+    }
+
+    .who-we-are p {
+        font-size: 14px;
+    }
+
+    .who-we-are-container {
+        flex-direction: column;
+    }
+
+    .who-we-are-video {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .who-we-are-text {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .industries-text h2 {
+        font-size: 28px;
+    }
+
+    .industries-text ul li {
+        font-size: 18px;
+    }
+
+    .circle-video-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+    .expert-knowledge-section h1 {
+        font-size: 28px;
+    }
+
+    .expert-knowledge-section p {
+        font-size: 14px;
+    }
+    .clients-header h1 {
+        font-size: 28px;
+    }
+
+    .clients-header p {
+        font-size: 14px;
+    }
+
+    .logo-item {
+        flex: 0 0 30%;
+    }
+
+    .logo-item img {
+        height: 80px; 
+    }
+    .logos-wrapper{
+        animation: slide 5s linear infinite;
+    }
+    .testimonials-section h1 {
+        font-size: 36px; 
+    }
+
+    .testimonial-box {
+        width: 90%; 
+        padding: 30px 20px;
+    }
+
+    .testimonial-box p {
+        font-size: 14px; 
+    }
+
+    .testimonial-author h4 {
+        font-size: 16px; 
+    }
+
+    .testimonial-author i {
+        font-size: 18px; 
+    }
+
+    .testimonial-author span {
+        font-size: 12px; 
+    }
+    .footer-section {
+        padding: 40px 20px;
+    }
+
+    .footer-left h1 {
+        font-size: 28px;
+    }
+
+    .footer-right h2 {
+        font-size: 22px;
+    }
+
+    .newsletter-form input[type="email"], .newsletter-form button {
+        font-size: 14px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+
+}
+/* Media Query for very small screens */
+@media (max-width: 320px) {
+    #navbar .logo {
+        font-size: 16px;
+    }
+
+    .linkedin-link {
+        top: 5px;
+        right: 10px;
+    }
+
+    .linkedin-logo {
+        font-size: 18px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.75rem;
+    }
+
+    .btn {
+        padding: 5px 15px;
+        font-size: 0.8rem;
+    }
+
+    /* Who We Are section */
+    .who-we-are h2 {
+        font-size: 24px;
+    }
+
+    .who-we-are p {
+        font-size: 12px;
+    }
+    .industries-section {
+        padding: 50px 10px;
+        height: auto;
+    }
+
+    .industries-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .industries-text h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .industries-text ul li {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .industries-text ul li .bullet{
+        font-size: 18px;
+        margin-right: 5px;
+    }
+
+    .circle-video-wrapper {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .circle-video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .expert-knowledge-section {
+        padding: 0 10px;
+    }
+
+    .expert-knowledge-section h1 {
+        font-size: 24px;  
+    }
+
+    .expert-knowledge-section p {
+        font-size: 12px; 
+        line-height: 1.6; 
+    }
+    .logos-wrapper{
+        animation: slide 5s linear infinite;
+    }
+    .testimonials-section h1 {
+        font-size: 28px;
+    }
+
+    .testimonial-box {
+        width: 100%; /* Full width on small screens */
+        padding: 20px 10px;
+    }
+
+    .testimonial-box p {
+        font-size: 12px; /* Small font for text */
+    }
+
+    .testimonial-author h4 {
+        font-size: 13px;
+    }
+
+    .testimonial-author span {
+        font-size: 10px;
+    }
+    .footer-section {
+        padding: 20px 10px;
+    }
+
+    .footer-left h1 {
+        font-size: 24px;
+    }
+
+    .footer-right h2 {
+        font-size: 18px;
+    }
+
+    .newsletter-form input[type="email"], .newsletter-form button {
+        font-size: 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+    }
+
+}
+
+/* Media Query for iPhone SE (375px width) */
+@media (max-width: 375px) {
+    .industries-section {
+        padding: 30px 15px;
+        height: auto;
+    }
+
+    .industries-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .industries-text h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .industries-text ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .industries-text ul li .bullet {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+
+    .circle-video-wrapper {
+        width: 240px;
+        height: 240px;
+        margin-top: 20px;
+    }
+
+    .circle-video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Adjust hero section */
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 30px;
+        font-size: 0.9rem;
+    }
+
+    /* Who We Are Section */
+    .who-we-are h2 {
+        font-size: 26px;
+    }
+
+    .who-we-are p {
+        font-size: 14px;
+    }
+
+    .who-we-are-container {
+        flex-direction: column;
+    }
+
+    .who-we-are-video {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .who-we-are-text {
+        text-align: center;
+        padding-left: 0;
+    }
+    .expert-knowledge-section h1 {
+        font-size: 26px;
+    }
+
+    .expert-knowledge-section p {
+        font-size: 13px;
+    }
+    .logos-wrapper{
+        animation: slide 5s linear infinite;
+    }
+    .testimonials-section h1 {
+        font-size: 32px;
+    }
+
+    .testimonial-box {
+        width: 95%; /* Make boxes take more width */
+        padding: 25px 15px;
+    }
+
+    .testimonial-box p {
+        font-size: 13px; /* Smaller text */
+    }
+
+    .testimonial-author h4 {
+        font-size: 15px;
+    }
+
+    .testimonial-author span {
+        font-size: 11px;
+    }
+    .footer-section {
+        padding: 30px 15px;
+    }
+
+    .footer-left h1 {
+        font-size: 26px;
+    }
+
+    .footer-right h2 {
+        font-size: 20px;
+    }
+
+    .newsletter-form input[type="email"], .newsletter-form button {
+        font-size: 13px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+
+/* Media Query for iPhone 12 Pro (390px width) */
+@media (max-width: 390px) {
+    .industries-section {
+        padding: 30px 15px;
+        height: auto;
+    }
+
+    .industries-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .industries-text h2 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .industries-text ul li {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .industries-text ul li .bullet {
+        font-size: 22px;
+        margin-right: 8px;
+    }
+
+    .circle-video-wrapper {
+        width: 260px;
+        height: 260px;
+        margin-top: 20px;
+    }
+
+    .circle-video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Adjust hero section */
+    .hero-text h1 {
+        font-size: 2.75rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 12px 35px;
+        font-size: 1rem;
+    }
+
+    /* Who We Are Section */
+    .who-we-are h2 {
+        font-size: 28px;
+    }
+
+    .who-we-are p {
+        font-size: 16px;
+    }
+
+    .who-we-are-container {
+        flex-direction: column;
+    }
+
+    .who-we-are-video {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .who-we-are-text {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .services-header h1 {
+        font-size: 28px;
+    }
+
+    .services-header p {
+        font-size: 14px;
+    }
+
+    .service-box h3 {
+        font-size: 18px;
+    }
+
+    .service-box p {
+        font-size: 13px;
+    }
+
+    .service-box {
+        padding: 30px;
+    }
+    .expert-knowledge-section h1 {
+        font-size: 28px;
+    }
+
+    .expert-knowledge-section p {
+        font-size: 14px;
+    }
+    .logos-wrapper{
+        animation: slide 5s linear infinite;
+    }
+    .testimonials-section h1 {
+        font-size: 30px;
+    }
+
+    .testimonial-box {
+        width: 95%; /* Make boxes take most of the screen width */
+        padding: 20px 15px;
+    }
+
+    .testimonial-box p {
+        font-size: 12px;
+    }
+
+    .testimonial-author h4 {
+        font-size: 14px;
+    }
+
+    .testimonial-author span {
+        font-size: 11px;
+    }
+    .footer-section {
+        padding: 30px 15px;
+    }
+
+    .footer-left h1 {
+        font-size: 26px;
+    }
+
+    .footer-right h2 {
+        font-size: 20px;
+    }
+
+    .newsletter-form input[type="email"], .newsletter-form button {
+        font-size: 13px;
+    }
+
+    .newsletter-form label {
+        font-size: 14px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+
+    .footer-menu a, .footer-legal a {
+        font-size: 14px;
+    }
+}
+
+
+/* Contact Form Styling */
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px); /* Adjust for navbar height */
+    background: linear-gradient(to bottom, #000000, #4155A6); /* Same gradient background as other sections */
+    padding: 100px 20px 20px 20px; /* Add top padding to avoid overlap with navbar */
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align labels and inputs to the left */
+}
+
+.contact-form label {
+    color: white;
+    font-weight: 300;
+    margin-bottom: 5px;
+    font-size: 14px; /* Made the font size smaller */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px; /* Made the font size smaller */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Set width to full within the container */
+    max-width: 500px;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 120px; /* Reduced the height slightly */
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4155A6; /* Changed to match the site's color scheme */
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px; /* Adds some space above the button */
+    align-self: center; /* Center the button */
+}
+
+.contact-form button:hover {
+    background-color: #31448c; /* Darker shade on hover */
+    transform: translateY(-2px);
+}
+
+/* .contact-section h1 {
+    font-size: 36px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center; */
+
+.contact-section p {
+    color: white;
+    font-size: 16px; /* Optional: You can also adjust the font size if needed */
+    text-align: center; /* Optional: To center the paragraph text */
+    margin-bottom: 20px; /* Optional: Add some margin to create space below the text */
+
+}
+
+/* Consultation Hero Section Styling */
+.consultation-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    background: linear-gradient(to bottom, #000000, #4155A6);
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.consultation-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.consultation-hero p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.consultation-hero .btn {
+    padding: 15px 40px;
+    background-color: #fff;
+    color: #4155A6;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.consultation-hero .btn:hover {
+    background-color: #ddd;
+    transform: translateY(-3px);
+}
+
+/* Why Consultation Section Styling */
+.why-consultation-section {
+    background: #030407;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.why-consultation-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.feature-icon {
+    font-size: 48px;
+    color: #4155A6;
+    margin-bottom: 20px;
+}
+
+.feature-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Video Section Styling */
+.video-section {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #4155A6, #6475d0);
+    text-align: center;
+    color: white;
+}
+
+.video-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+/* Testimonials Section Styling */
+.consultation-testimonials {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #6475d0, #9ABCFF);
+    color: black;
+    text-align: center;
+}
+
+.consultation-testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.testimonial-box p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #000;
+}
+
+.testimonial-author i {
+    font-size: 20px;
+    color: #4155A6;
+}
+
+.testimonial-author h4 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.testimonial-author span {
+    font-size: 0.9rem;
+}
+
+/* Consultation Form Section Styling */
+.consultation-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+    background: linear-gradient(to bottom, #000000, #4155A6);
+    padding: 100px 20px;
+    color: white;
+}
+
+.consultation-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.consultation-section p {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.consultation-form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.consultation-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.consultation-form label {
+    color: white;
+    font-weight: 300;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.consultation-form input,
+.consultation-form textarea {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    width: 100%;
+}
+
+.consultation-form button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4155A6;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.consultation-form button:hover {
+    background-color: #31448c;
+    transform: translateY(-2px);
+}
+
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #000000, #4155A6);
+    color: white;
+}
+
+/* Transparent Navbar Styling */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent; 
+    z-index: 1000;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#navbar .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#navbar ul.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul.nav-links li {
+    margin: 0 15px;
+}
+
+#navbar ul.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+#navbar ul.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+ /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: #0b0d17; /* Keep consistent theme */
+    color: white;
+}
+
+/* Navbar Styling */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#navbar .logo {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#navbar ul.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul.nav-links li {
+    margin: 0 15px;
+}
+
+#navbar ul.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+#navbar ul.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* LinkedIn Icon Styling */
+.linkedin-link {
+    position: absolute;
+    right: 20px;
+}
+
+.linkedin-logo {
+    font-size: 24px;
+    color: white;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: #0b0d17; /* Consistent background color with the index page */
+    color: white;
+}
+
+/* Navbar Styling */
+/* #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#navbar .logo {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#navbar ul.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul.nav-links li {
+    margin: 0 15px;
+}
+
+#navbar ul.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+#navbar ul.nav-links li a:hover {
+    text-decoration: underline; */
+/* } */
+
+/* LinkedIn Icon Styling */
+/* .linkedin-link {
+    position: absolute;
+    right: 20px;
+}
+
+.linkedin-logo {
+    font-size: 24px;
+    color: white;
+} */
+
+/* Solutions Intro Section */
+.solutions-intro {
+    background: linear-gradient(to bottom, #000000, #4155A6); /* Same gradient background as Contact Section */
+    padding: 100px 20px 60px; /* Add more top padding to keep some distance from the navbar */
+    color: white;
+    text-align: center;
+}
+
+.solutions-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 400; /* Set to a lighter weight */
+}
+
+.solutions-intro p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Solutions Cards Section */
+.solutions-cards {
+    background: linear-gradient(to bottom, #000000, #4155A6); /* Same gradient background as other sections */
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.solution-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid white; /* White border for better visibility */
+    border-radius: 15px;
+    color: white;
+    padding: 40px;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    text-align: left;
+    position: relative;
+    opacity: 0;
+    transform: translateY(100px) rotateX(15deg);
+}
+
+.solution-card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.solution-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.solution-icon {
+    font-size: 3rem;
+    color: #4155A6;
+    margin-bottom: 15px;
+}
+
+/* Scroll Effect */
+.solution-card.show {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Styling for Solutions Page */
+@media (max-width: 768px) {
+    .solutions-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .solutions-intro {
+        padding: 80px 20px 40px;
+    }
+
+    .solutions-intro h1 {
+        font-size: 2rem;
+    }
+
+    .solutions-intro p {
+        font-size: 1rem;
+    }
+
+    .solution-card {
+        width: 90%;
+    }
+
+    .solution-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .solution-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-menu {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-left address {
+    font-style: normal;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-legal {
+    margin-bottom: 20px;
+}
+
+.footer-legal a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+.footer-right {
+    flex: 1;
+}
+
+.footer-right h2 {
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.newsletter-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.newsletter-form .subscribe-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+}
