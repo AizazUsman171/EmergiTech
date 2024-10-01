@@ -1,0 +1,992 @@
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #fff;
+    margin: 0; 
+    padding: 0; 
+
+}
+
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent; 
+    z-index: 1000;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#navbar .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#navbar ul.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul.nav-links li {
+    margin: 0 15px;
+}
+
+#navbar ul.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+#navbar ul.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Our Journey Section Styling */
+.journey-section {
+    padding: 80px 20px;
+    height: 700px;
+    text-align: center;
+    background-color: #000000; /* Dark background */
+}
+
+.journey-container {
+    max-width: 850px;
+    margin: 170px auto 0; /* Adjust the top margin value (20px) as needed */
+}
+
+
+.journey-section h2 {
+    font-size: 60px;
+    font-weight: 100;
+    margin-bottom: 70px;
+    margin-left: -1000px; /* Adjust this value as needed */
+    color: #fff;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100px); /* Slide in from the bottom */
+    transition: all 0.8s ease; /* Faster transition: 0.3 seconds */
+}
+
+.journey-section h2.show {
+    opacity: 1; /* Make the heading visible */
+    transform: translateY(0); /* Slide it to its final position */
+}
+
+.journey-section p {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #fff; 
+    margin-left: -50px; /* Adjust this value as needed */
+    text-align: left; /* Aligns the paragraph text to the left */
+
+}
+
+/* Our Team Section  */
+
+.team-section {
+    display: flex;
+    margin-bottom: 0px;
+    justify-content: center;
+    gap: 100px;
+    background-color: #0b0d17; /* Dark background */
+    background: linear-gradient(to bottom, #000000, #1a2139);
+  }
+  
+  .team-member {
+    text-align: left;
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+  }
+  
+  .team-photo {
+    border-radius: 10px;
+    width: 90%;
+    height: 50%;
+  }
+  
+  h3 {
+    font-size: 2em;
+    margin-top: 5px;
+    font-weight: 300; /* Use a lighter font weight */
+    font-family: 'Arial', sans-serif; /* Adjust to a slimmer font-family if necessary */
+  }
+  
+  
+  p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+
+  .job-title {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 50px; /* Add bottom margin */
+}
+
+
+  
+  p1 {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin: 10px 0;
+    margin-bottom: 200px;
+  }
+
+  .linkedin-link {
+    margin: 50px auto 20px auto; /* Increase the top margin for more space */
+    display: block; /* Change to block to allow centering */
+    margin: 30px auto 20px auto; /* Center by using auto for left and right margins */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center; /* Center text within the block */
+}
+
+  
+  .linkedin-link:hover {
+    text-decoration: underline;
+  }
+
+
+/* Our Values Section Styling */
+
+.values-section {
+    display: flex;
+    color: #fff;
+    padding: 200px;
+    text-align: center;
+    margin-top: 50px;
+    background: linear-gradient(to top, #000000, #1a2139);
+}
+
+.values-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.values-section h2 {
+
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 100;
+    
+}
+
+.values-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #ccc;
+}
+
+.values-section {
+    margin-top: 0px; /* Remove or adjust margin */
+}
+
+/* circular video section */
+.circle-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.curve-item {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    font-style: italic; /* Make text italic */
+    list-style: none; /* Remove default bullet points from list items */
+}
+
+/* Add a bullet before each item */
+.curve-item::before {
+    content: "•"; /* Use a bullet point character */
+    margin-right: 10px; /* Add some space between the bullet and the text */
+    color: white; /* Ensure bullet is white, or adjust for your design */
+}
+
+/* Position each item at specific angles around the circle, with larger gaps */
+.curve-item:nth-child(1) {
+    transform: rotate(320deg) translateX(350px) rotate(-320deg); /* Increased translateX for more spacing */
+}
+
+.curve-item:nth-child(2) {
+    transform: rotate(340deg) translateX(360px) rotate(-340deg);
+}
+
+.curve-item:nth-child(3) {
+    transform: rotate(360deg) translateX(370px) rotate(-360deg);
+}
+
+.curve-item:nth-child(4) {
+    transform: rotate(20deg) translateX(360px) rotate(-20deg);
+}
+
+.curve-item:nth-child(5) {
+    transform: rotate(40deg) translateX(350px) rotate(-40deg);
+}
+
+
+/* numbers section */
+.numbers-section {
+    height: 900px; 
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom, #000000, #607fed);
+    padding-top: 450px; 
+}
+
+
+
+h2 {
+    font-size: 4rem;
+    font-weight: 100; 
+    color: #000;
+}
+
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.stat-box {
+    background-color: transparent; /* Inner box color */
+    padding: 2rem;
+    border-radius: 15px;
+    width: 400px;
+    transition: transform 0.3s;
+    border: 2px solid black; /* Add a black border */
+}
+
+
+.stat-box h3 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: black; /* Set the text color to black */
+}
+
+
+.stat-box p {
+    font-size: 1.1rem;
+    color: black; /* Set the text color to black */
+
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Footer Section Styling */
+.footer-section {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-menu {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-left address {
+    font-style: normal;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-legal {
+    margin-bottom: 20px;
+}
+
+.footer-legal a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+.footer-right {
+    flex: 1;
+}
+
+.footer-right h2 {
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.newsletter-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.newsletter-form .subscribe-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form .subscribe-checkbox input {
+    margin-right: 10px;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+}
+
+
+/* Media Query for tablets and smaller screens */
+@media (max-width: 991px) {
+    /* Navbar adjustments */
+    #navbar .logo {
+        font-size: 28px;
+    }
+    #navbar ul.nav-links li {
+        margin: 0 10px;
+    }
+    #navbar ul.nav-links li a {
+        font-size: 14px;
+    }
+
+    /* Journey Section */
+    .journey-section {
+        padding: 60px 15px;
+        height: auto;
+    }
+    .journey-container {
+        margin: 120px auto 0;
+    }
+    .journey-section h2 {
+        font-size: 50px;
+        margin-left: 0;
+    }
+    .journey-section p {
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    /* Team Section */
+    .team-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .team-member {
+        width: 100%;
+        max-width: 600px;
+    }
+    .team-photo {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Values Section */
+    .values-section {
+        padding: 100px 20px;
+    }
+    .values-section h2 {
+        font-size: 40px;
+    }
+    .values-section p {
+        font-size: 16px;
+    }
+
+    /* Numbers Section */
+    .numbers-section {
+        padding-top: 200px;
+        height: auto;
+    }
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stat-box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Footer Section */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-left h1 {
+        font-size: 28px;
+    }
+    .footer-right h2 {
+        font-size: 24px;
+    }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 767px) {
+    /* Navbar adjustments */
+    #navbar .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #navbar .logo {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    #navbar ul.nav-links {
+        flex-direction: column;
+    }
+    #navbar ul.nav-links li {
+        margin: 5px 0;
+    }
+    #navbar ul.nav-links li a {
+        font-size: 16px;
+    }
+
+    /* Journey Section */
+    .journey-section h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+    .journey-section p {
+        font-size: 18px;
+    }
+
+    /* Team Section */
+    .team-member {
+        padding: 20px;
+    }
+    h3 {
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+
+    /* Values Section */
+    .values-section {
+        padding: 80px 15px;
+    }
+    .values-section h2 {
+        font-size: 32px;
+    }
+    .values-section p {
+        font-size: 14px;
+    }
+
+    /* Numbers Section */
+    .numbers-section {
+        padding-top: 100px;
+    }
+    .stat-box {
+        width: 100%;
+    }
+
+    /* Footer Section */
+    .footer-left h1 {
+        font-size: 24px;
+    }
+    .footer-right h2 {
+        font-size: 20px;
+    }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+    /* Navbar adjustments */
+    #navbar .logo {
+        font-size: 20px;
+    }
+    #navbar ul.nav-links li a {
+        font-size: 14px;
+    }
+
+    /* Journey Section */
+    .journey-section h2 {
+        font-size: 28px;
+    }
+    .journey-section p {
+        font-size: 16px;
+    }
+
+    /* Team Section */
+    h3 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 0.8em;
+    }
+
+    /* Values Section */
+    .values-section h2 {
+        font-size: 24px;
+    }
+    .values-section p {
+        font-size: 12px;
+    }
+
+    /* Numbers Section */
+    .stat-box h3 {
+        font-size: 3rem;
+    }
+    .stat-box p {
+        font-size: 0.9rem;
+    }
+
+    /* Footer Section */
+    .footer-left h1 {
+        font-size: 20px;
+    }
+    .footer-right h2 {
+        font-size: 18px;
+    }
+    .newsletter-form label,
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        font-size: 14px;
+    }
+}
+
+/* Media Query for iPhone SE (375px width) */
+@media (max-width: 375px) {
+    /* Navbar adjustments */
+    #navbar .logo {
+        font-size: 18px;
+    }
+    #navbar ul.nav-links li a {
+        font-size: 12px;
+    }
+
+    /* Journey Section */
+    .journey-section h2 {
+        font-size: 24px;
+    }
+    .journey-section p {
+        font-size: 14px;
+    }
+
+    /* Team Section */
+    h3 {
+        font-size: 1.3em;
+    }
+    p {
+        font-size: 0.7em;
+    }
+
+    /* Values Section */
+    .values-section h2 {
+        font-size: 20px;
+    }
+    .values-section p {
+        font-size: 10px;
+    }
+
+    /* Numbers Section */
+    .stat-box h3 {
+        font-size: 2.5rem;
+    }
+    .stat-box p {
+        font-size: 0.8rem;
+    }
+
+    /* Footer Section */
+    .footer-left h1 {
+        font-size: 18px;
+    }
+    .footer-right h2 {
+        font-size: 16px;
+    }
+    .newsletter-form label,
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        font-size: 12px;
+    }
+}
+
+/* Media Query for iPhone 12 Pro (390px width) */
+@media (max-width: 390px) {
+    /* Navbar adjustments */
+    #navbar .logo {
+        font-size: 20px;
+    }
+    #navbar ul.nav-links li a {
+        font-size: 13px;
+    }
+
+    /* Journey Section */
+    .journey-section h2 {
+        font-size: 26px;
+    }
+    .journey-section p {
+        font-size: 15px;
+    }
+
+    /* Team Section */
+    h3 {
+        font-size: 1.4em;
+    }
+    p {
+        font-size: 0.75em;
+    }
+
+    /* Values Section */
+    .values-section h2 {
+        font-size: 22px;
+    }
+    .values-section p {
+        font-size: 11px;
+    }
+
+    /* Numbers Section */
+    .stat-box h3 {
+        font-size: 2.8rem;
+    }
+    .stat-box p {
+        font-size: 0.85rem;
+    }
+
+    /* Footer Section */
+    .footer-left h1 {
+        font-size: 20px;
+    }
+    .footer-right h2 {
+        font-size: 17px;
+    }
+    .newsletter-form label,
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        font-size: 13px;
+    }
+}
+
+/* Media Query for tablets and smaller screens */
+@media (max-width: 991px) {
+    .text-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .curve-item {
+        font-size: 30px; /* Reduce font size */
+    }
+
+    .curve-item:nth-child(1) {
+        transform: rotate(320deg) translateX(300px) rotate(-320deg); /* Adjust translateX */
+    }
+
+    .curve-item:nth-child(2) {
+        transform: rotate(340deg) translateX(310px) rotate(-340deg);
+    }
+
+    .curve-item:nth-child(3) {
+        transform: rotate(360deg) translateX(320px) rotate(-360deg);
+    }
+
+    .curve-item:nth-child(4) {
+        transform: rotate(20deg) translateX(310px) rotate(-20deg);
+    }
+
+    .curve-item:nth-child(5) {
+        transform: rotate(40deg) translateX(300px) rotate(-40deg);
+    }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 767px) {
+    .text-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .curve-item {
+        font-size: 25px; /* Further reduce font size */
+    }
+
+    .curve-item:nth-child(1) {
+        transform: rotate(320deg) translateX(250px) rotate(-320deg);
+    }
+
+    .curve-item:nth-child(2) {
+        transform: rotate(340deg) translateX(260px) rotate(-340deg);
+    }
+
+    .curve-item:nth-child(3) {
+        transform: rotate(360deg) translateX(270px) rotate(-360deg);
+    }
+
+    .curve-item:nth-child(4) {
+        transform: rotate(20deg) translateX(260px) rotate(-20deg);
+    }
+
+    .curve-item:nth-child(5) {
+        transform: rotate(40deg) translateX(250px) rotate(-40deg);
+    }
+}
+
+@media (max-width: 660px) {
+    .text-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .curve-item {
+        font-size: 22px; /* Adjust font size for 660px width */
+    }
+
+    .curve-item:nth-child(1) {
+        transform: rotate(320deg) translateX(230px) rotate(-320deg);
+    }
+
+    .curve-item:nth-child(2) {
+        transform: rotate(340deg) translateX(240px) rotate(-340deg);
+    }
+
+    .curve-item:nth-child(3) {
+        transform: rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+
+    .curve-item:nth-child(4) {
+        transform: rotate(20deg) translateX(240px) rotate(-20deg);
+    }
+
+    .curve-item:nth-child(5) {
+        transform: rotate(40deg) translateX(230px) rotate(-40deg);
+    }
+}
+
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+    .text-container {
+        width: 120px;  /* Reduce width */
+        height: 120px; /* Reduce height */
+    }
+
+    .curve-item {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .curve-item:nth-child(1) {
+        transform: rotate(320deg) translateX(150px) rotate(-320deg); /* Reduced translateX for better spacing */
+    }
+
+    .curve-item:nth-child(2) {
+        transform: rotate(340deg) translateX(160px) rotate(-340deg);
+    }
+
+    .curve-item:nth-child(3) {
+        transform: rotate(360deg) translateX(170px) rotate(-360deg);
+    }
+
+    .curve-item:nth-child(4) {
+        transform: rotate(20deg) translateX(160px) rotate(-20deg);
+    }
+
+    .curve-item:nth-child(5) {
+        transform: rotate(40deg) translateX(150px) rotate(-40deg);
+    }
+}
+
+
+/* Media Query for iPhone SE (375px width) */
+@media (max-width: 375px) {
+    .text-container {
+        width: 90px;  /* Further reduced width */
+        height: 90px; /* Further reduced height */
+    }
+
+    .curve-item {
+        font-size: 11px; /* Further reduced font size */
+    }
+
+    .curve-item:nth-child(1) {
+        transform: rotate(320deg) translateX(130px) rotate(-320deg); /* Reduced translateX for compact spacing */
+    }
+
+    .curve-item:nth-child(2) {
+        transform: rotate(340deg) translateX(140px) rotate(-340deg);
+    }
+
+    .curve-item:nth-child(3) {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+
+    .curve-item:nth-child(4) {
+        transform: rotate(20deg) translateX(140px) rotate(-20deg);
+    }
+
+    .curve-item:nth-child(5) {
+        transform: rotate(40deg) translateX(130px) rotate(-40deg);
+    }
+}
+
+/* Media Query for very small screens (350px width) */
+@media (max-width: 350px) {
+    .text-container {
+        width: 80px;  /* Reduced width for very small screens */
+        height: 80px; /* Reduced height */
+    }
+
+    .curve-item {
+        font-size: 10px; /* Smaller font size */
+    }
+
+    .curve-item:nth-child(1) {
+        transform: rotate(320deg) translateX(120px) rotate(-320deg); /* Reduced translateX for tight spacing */
+    }
+
+    .curve-item:nth-child(2) {
+        transform: rotate(340deg) translateX(130px) rotate(-340deg);
+    }
+
+    .curve-item:nth-child(3) {
+        transform: rotate(360deg) translateX(140px) rotate(-360deg);
+    }
+
+    .curve-item:nth-child(4) {
+        transform: rotate(20deg) translateX(130px) rotate(-20deg);
+    }
+
+    .curve-item:nth-child(5) {
+        transform: rotate(40deg) translateX(120px) rotate(-40deg);
+    }
+}
+

@@ -1,9 +1,10 @@
-document.addEventListener("DOMContentLoaded", function() {
+// old
+document.addEventListener("DOMContentLoaded", function () {
     // Scroll Effect for Navbar
     let lastScrollTop = 0;
     const navbar = document.getElementById("navbar");
 
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
         // Adding/removing 'scrolled' class to change the background color
@@ -32,91 +33,36 @@ document.addEventListener("DOMContentLoaded", function() {
         navbarLinks.classList.toggle("show");
     });
 
-    // Scroll Animation Effect for Cards using Intersection Observer
+    // GSAP Scroll Animation for Cards
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Apply GSAP animation to each card
     const solutionCards = document.querySelectorAll(".solution-card");
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            } else {
-                entry.target.classList.remove("show");
+    solutionCards.forEach((card, index) => {
+        gsap.fromTo(
+            card,
+            {
+                // Initial state: slightly rotated on Y-axis and hidden
+                opacity: 0,
+                rotateY: 45,
+                y: 100,
+            },
+            {
+                // Final state: visible, original position, no rotation
+                opacity: 1,
+                rotateY: 0,
+                y: 0,
+                duration: 1.5,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: card, // Trigger the animation when the card is in view
+                    start: "top 80%", // Start the animation when the card's top is at 80% of viewport
+                    end: "bottom 20%",
+                    scrub: true, // Smooth scrolling effect
+                },
             }
-        });
-    }, {
-        threshold: 0.3
+        );
     });
-
-    solutionCards.forEach((card) => {
-        observer.observe(card);
-    });
-
-    // JavaScript for sliding functionality of client logos
-    const logosWrapper = document.querySelector('.logos-wrapper');
-    if (logosWrapper) {
-        let isMouseDown = false;
-        let startX, scrollLeft;
-
-        logosWrapper.addEventListener('mousedown', (e) => {
-            isMouseDown = true;
-            startX = e.pageX - logosWrapper.offsetLeft;
-            scrollLeft = logosWrapper.scrollLeft;
-        });
-
-        logosWrapper.addEventListener('mouseleave', () => {
-            isMouseDown = false;
-        });
-
-        logosWrapper.addEventListener('mouseup', () => {
-            isMouseDown = false;
-        });
-
-        logosWrapper.addEventListener('mousemove', (e) => {
-            if (!isMouseDown) return;
-            e.preventDefault();
-            const x = e.pageX - logosWrapper.offsetLeft;
-            const walk = (x - startX) * 3; // Adjust the scroll speed
-            logosWrapper.scrollLeft = scrollLeft - walk;
-        });
-    }
-
-    // GSAP Scroll Animation for Cards
-    if (typeof gsap !== "undefined" && gsap.registerPlugin) {
-        gsap.registerPlugin(ScrollTrigger);
-
-        var start = "top top";
-
-        gsap.to(".card-1", {
-            scrollTrigger: {
-                trigger: ".solutions-cards",
-                start: start,
-                end: "+=" + (document.querySelector('.solutions-cards').offsetHeight - 500),
-                scrub: true,
-            },
-            yPercent: 311,
-            scale: 0.94,
-        });
-
-        gsap.to(".card-2", {
-            scrollTrigger: {
-                trigger: ".solutions-cards",
-                start: start,
-                end: "+=" + (document.querySelector('.solutions-cards').offsetHeight - 500),
-                scrub: true,
-            },
-            yPercent: 208,
-            scale: 0.96,
-        });
-
-        gsap.to(".card-3", {
-            scrollTrigger: {
-                trigger: ".solutions-cards",
-                start: start,
-                end: "+=" + (document.querySelector('.solutions-cards').offsetHeight - 500),
-                scrub: true,
-            },
-            yPercent: 105,
-            scale: 0.98,
-        });
-    }
 });
+
