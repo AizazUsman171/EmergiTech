@@ -1,4 +1,3 @@
-// old
 document.addEventListener("DOMContentLoaded", function () {
     // Scroll Effect for Navbar
     let lastScrollTop = 0;
@@ -65,4 +64,3 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     });
 });
-
